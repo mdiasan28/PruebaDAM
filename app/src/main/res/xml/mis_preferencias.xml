@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <PreferenceCategory android:title="Tipo de relleno">
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="relleno"
+            android:summaryOff="Relleno"
+            android:summaryOn="Borde"
+            android:title="Tipo Relleno" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:textColor="#00838F"
+        android:title="Tamaño">
+
+        <ListPreference
+            android:defaultValue="Mediano"
+            android:entries="@array/tamaño"
+            android:entryValues="@array/tamaño"
+            android:key="tamaño"
+            android:selectAllOnFocus="true"
+            android:summary="Tamaño %s"
+            android:title="Tipo tamaño" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:textColor="#00838F"
+        android:title="Forma Geométrica">
+
+        <ListPreference
+            android:defaultValue="Circulo"
+            android:entries="@array/formas"
+            android:entryValues="@array/formas"
+            android:key="forma"
+            android:selectAllOnFocus="true"
+            android:summary="%s"
+            android:title="Forma Elegida" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Tipo color">
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="tipocolor"
+            android:summaryOff="Aleatorio"
+            android:summaryOn="Color Usuario"
+            android:title="Tipo de coloreado" />
+
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Color RGB"
+        android:dependency="tipocolor">
+        <EditTextPreference
+            android:defaultValue=""
+            android:key="colorR"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="R" />
+        <EditTextPreference
+            android:defaultValue=""
+            android:key="colorG"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="G" />
+        <EditTextPreference
+            android:defaultValue=""
+            android:key="colorB"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="B" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Tipo dibujado">
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="dibujado"
+            android:summaryOff="Único"
+            android:summaryOn="Varios"
+            android:title="Tipo de dibujado" />
+
+    </PreferenceCategory>
+
+
+    <Preference
+        android:id="@+id/pref_volver"
+        android:layout="@layout/preferencia_volver"
+        android:title="Volver"
+        />
+
+
+</PreferenceScreen>

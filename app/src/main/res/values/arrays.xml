@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="formas">
+        <item>Circulo</item>
+        <item>Cuadrado</item>
+        <item>Rectángulo</item>
+        <item>Estrella</item>
+    </string-array>
+    <string-array name="tamaño">
+        <item>Grande</item>
+        <item>Mediano</item>
+        <item>Pequeño</item>
+    </string-array>
+
+
+</resources>
